@@ -6,8 +6,9 @@
 /* ============== ВИБІР АКТИВНОГО ЗАВДАННЯ ============== */
 #define TASK_LDR_SERVO          1
 #define TASK_ENCODER_SERVO      2
+#define TASK_SAFE               3
 
-#define ACTIVE_TASK             TASK_ENCODER_SERVO
+#define ACTIVE_TASK             TASK_SAFE
 
 /* ============== LDR (ADC1) ============== */
 #define LDR_ADC_UNIT            ADC_UNIT_1
@@ -35,10 +36,14 @@
 #define BUZZER_LEDC_CHANNEL     LEDC_CHANNEL_1
 #define BUZZER_LEDC_RESOLUTION  LEDC_TIMER_10_BIT
 
+/* ============== RELAY / LOCK INDICATOR ============== */
+#define RELAY_GPIO              16
+#define RELAY_ACTIVE_LEVEL      1               // 1 для LED або Active-High реле, 0 для Active-Low реле
+
 /* ============== ROTARY ENCODER (PCNT + Button) ============== */
 #define ENC_PIN_A               4               // CLK
 #define ENC_PIN_B               5               // DT
 #define ENC_PIN_SW              6               // SW
-#define ENC_STEPS_PER_DETENT    4               // 4 для KY-040 (змініть на 2, якщо 1 клацання дає 2 тіки)
+#define ENC_STEPS_PER_DETENT    4
 #define ENC_LONG_PRESS_MS       800
-#define ENC_DEBOUNCE_TICKS      3               // 3 * 10 мс = 30 мс
+#define ENC_DEBOUNCE_TICKS      3

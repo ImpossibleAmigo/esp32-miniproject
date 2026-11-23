@@ -7,6 +7,7 @@ idf_component_register(
         "drivers/encoder.c"
         "tasks/task_ldr_servo.c"
         "tasks/task_encoder_servo.c"
+        "tasks/task_safe.c"
     INCLUDE_DIRS
         "."
 )
