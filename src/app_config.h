@@ -5,7 +5,9 @@
 
 /* ============== ВИБІР АКТИВНОГО ЗАВДАННЯ ============== */
 #define TASK_LDR_SERVO          1
-#define ACTIVE_TASK             TASK_LDR_SERVO
+#define TASK_ENCODER_SERVO      2
+
+#define ACTIVE_TASK             TASK_ENCODER_SERVO
 
 /* ============== LDR (ADC1) ============== */
 #define LDR_ADC_UNIT            ADC_UNIT_1
@@ -26,3 +28,17 @@
 #define SERVO_MAX_DEG           170
 #define SERVO_MIN_US            500
 #define SERVO_MAX_US            2500
+
+/* ============== BUZZER (LEDC Timer 1) ============== */
+#define BUZZER_GPIO             15
+#define BUZZER_LEDC_TIMER       LEDC_TIMER_1
+#define BUZZER_LEDC_CHANNEL     LEDC_CHANNEL_1
+#define BUZZER_LEDC_RESOLUTION  LEDC_TIMER_10_BIT
+
+/* ============== ROTARY ENCODER (PCNT + Button) ============== */
+#define ENC_PIN_A               4               // CLK
+#define ENC_PIN_B               5               // DT
+#define ENC_PIN_SW              6               // SW
+#define ENC_STEPS_PER_DETENT    4               // 4 для KY-040 (змініть на 2, якщо 1 клацання дає 2 тіки)
+#define ENC_LONG_PRESS_MS       800
+#define ENC_DEBOUNCE_TICKS      3               // 3 * 10 мс = 30 мс

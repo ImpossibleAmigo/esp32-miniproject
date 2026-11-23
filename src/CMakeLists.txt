@@ -3,7 +3,10 @@ idf_component_register(
         "main.c"
         "drivers/servo.c"
         "drivers/ldr.c"
+        "drivers/buzzer.c"
+        "drivers/encoder.c"
         "tasks/task_ldr_servo.c"
+        "tasks/task_encoder_servo.c"
     INCLUDE_DIRS
         "."
 )
