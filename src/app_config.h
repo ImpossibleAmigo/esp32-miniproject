@@ -7,8 +7,9 @@
 #define TASK_LDR_SERVO          1
 #define TASK_ENCODER_SERVO      2
 #define TASK_SAFE               3
+#define TASK_CALCULATOR         4
 
-#define ACTIVE_TASK             TASK_SAFE
+#define ACTIVE_TASK             TASK_CALCULATOR
 
 /* ============== LDR (ADC1) ============== */
 #define LDR_ADC_UNIT            ADC_UNIT_1
